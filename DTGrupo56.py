@@ -131,7 +131,7 @@ with tab1:
 with tab2:
     st.write("Este projeto já trás dois modelos treinados prontos para uso. Caso queira/necessite retreinar os modelos, proceda da seguinte maneira:") 
     st.write(":black_medium_small_square: Salvar no diretório raiz do projeto um arquivo CSV com o nome 'DadosNormalizados-Final.csv' com a estrutura conforme abaixo")
-    st.image("cabecalho_arquivo.png")
+    st.image("cabecalho_arquivo.PNG")
     st.write(":black_medium_small_square: Garantir que os números estão com '.' como separador decimal")
     st.write(":black_medium_small_square: Garantir que não existam valores nulos no arquivo")
     
