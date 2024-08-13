@@ -266,8 +266,8 @@ with tab3:
         st.write("Precisão: 84.09%")
         st.write("Recall: 58.73%")
         st.write("F1-Score: 69.16%")
-        st.image("cm_KNN.png")
-        st.image("roc_KNN.png")
+        st.image("cm_knn.png")
+        st.image("roc_KNN.PNG")
     with col32:
         st.subheader('Random Forest')
         st.write("Acurácia: 97.11%")
@@ -275,7 +275,7 @@ with tab3:
         st.write("Recall: 88.52%")
         st.write("F1-Score: 89.26%")
         st.image("cm_RF.png")
-        st.image("roc_RF.png")
+        st.image("roc_RF.PNG")
 
 
 
