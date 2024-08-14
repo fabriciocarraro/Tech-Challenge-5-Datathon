@@ -25,6 +25,7 @@ plt.style.use('fivethirtyeight')
 plt.rcParams['lines.linewidth'] = 2
 plt.rcParams['font.size'] = 10
 
+arquivo_final = "DadosNormalizados-Final.csv"
 
 # Usado para salvar os modelo treinado
 from pickle4 import pickle
