@@ -71,7 +71,7 @@ st.write(":black_medium_small_square: **IAA** - Indicador de Auto Avaliação")
 st.write(":black_medium_small_square: **IPS** - Indicador Psicossocial")
 st.write(":black_medium_small_square: **IPP** - Indicador Psicopedagógico")
 st.write(":black_medium_small_square: **IPV** - Indicador de Ponto de Virada")
-st.write("Adicionalmente disponibilizamos um painel de análises através deste :point_right: **[link](https://app.powerbi.com/view?r=eyJrIjoiMjZkYjU1ODQtMTAxMS00ODdlLTlkOTQtZGJkNGEyM2ViZjFjIiwidCI6IjJlYzg1YTJlLTIzODEtNDZmMC1hM2RiLWQ5NDZkMmJhNDIyZiJ9)**")
+st.write("Adicionalmente disponibilizamos um painel de análises através deste :point_right: **[link](https://app.powerbi.com/view?r=eyJrIjoiOTExYmZiMTYtYmU5Mi00OTA5LThhNzAtMDEyOWM4NmFkZjJiIiwidCI6IjJlYzg1YTJlLTIzODEtNDZmMC1hM2RiLWQ5NDZkMmJhNDIyZiJ9)**")
 
 st.divider()  
 st.subheader('**Notas Iniciais do Grupo**')
@@ -130,10 +130,26 @@ with tab1:
 
 with tab2:
     st.write("Este projeto já trás dois modelos treinados prontos para uso. Caso queira/necessite retreinar os modelos, proceda da seguinte maneira:") 
-    st.write(":black_medium_small_square: Salvar no diretório raiz do projeto um arquivo CSV com o nome 'DadosNormalizados-Final.csv' com a estrutura conforme abaixo")
-    st.image("cabecalho_arquivo.PNG")
+    st.write(":black_medium_small_square: Faça o upload de um arquivo CSV com o nome 'DadosNormalizados-Final.csv' com a estrutura conforme abaixo")
+    st.image("cabecalho_arquivo.png")
+    st.write("Caso queira, faça o download do arquivo atual e proceda com os ajustes necessários.") 
+    with open(arquivo_final, "rb") as file:
+        btn = st.download_button(
+            label="Download arquivo CSV atual",
+            data=file,
+            file_name=arquivo_final,
+            mime="text/csv",
+        )    
+
     st.write(":black_medium_small_square: Garantir que os números estão com '.' como separador decimal")
     st.write(":black_medium_small_square: Garantir que não existam valores nulos no arquivo")
+    
+    uploaded_file = st.file_uploader('Choose file',type=['csv','txt'])
+
+    if uploaded_file:
+        with open(arquivo_final, 'wb') as file:
+            file.write(uploaded_file.getbuffer()) 
+            st.write('Arquivo Salvo com sucesso!')
     
     col21, col22 = st.columns(2)
     with col21:
