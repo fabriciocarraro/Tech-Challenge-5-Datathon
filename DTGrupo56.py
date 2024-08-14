@@ -131,7 +131,7 @@ with tab1:
 with tab2:
     st.write("Este projeto já trás dois modelos treinados prontos para uso. Caso queira/necessite retreinar os modelos, proceda da seguinte maneira:") 
     st.write(":black_medium_small_square: Faça o upload de um arquivo CSV com o nome 'DadosNormalizados-Final.csv' com a estrutura conforme abaixo")
-    st.image("cabecalho_arquivo.png")
+    st.image("cabecalho_arquivo.PNG")
     st.write("Caso queira, faça o download do arquivo atual e proceda com os ajustes necessários.") 
     with open(arquivo_final, "rb") as file:
         btn = st.download_button(
